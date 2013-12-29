@@ -37,6 +37,10 @@
 
 @property (nonatomic, weak) id<NCListerDataSourceDelegate> delegate;
 
+- (id)init;
+- (id)initWithWorkerPath:(NSString*)pathToWorker;
+
+
 -(void)setWorkingDir:(NSString*)path;
 
 -(void)reload;

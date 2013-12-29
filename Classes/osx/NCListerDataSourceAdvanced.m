@@ -43,12 +43,22 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 @synthesize worker = m_worker;
 
 - (id)init {
+	return [self initWithWorkerPath:nil];
+}
+
+- (id)initWithWorkerPath:(NSString*)pathToWorker {
     if(self = [super init]) {
 		m_working_dir = nil;
 		m_resolved_working_dir = nil;
 		m_items = nil;
 		m_profiler = [[NCTimeProfilerSetWorkingDir alloc] init];
-		m_worker = [[NCWorker alloc] initWithController:self label:@"TODO_insert_label_here"];
+		
+		NSString *label = @"TODO_insert_label_here";
+		if (pathToWorker) {
+			m_worker = [[NCWorker alloc] initWithController:self label:label pathToWorker:pathToWorker];
+		} else {
+			m_worker = [[NCWorker alloc] initWithController:self label:label];
+		}
 		
 		m_copy_operation_names = nil;
 		m_copy_operation_source_dir = nil;
