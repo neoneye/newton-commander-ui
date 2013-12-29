@@ -400,32 +400,39 @@ BOOL is_the_cocoa_simulator_running() {
 	
 	[self setImageCache:[[NCImageCache alloc] init]];
 
+	NSString *bundlePath = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"NewtonCommanderUI.bundle"];
+	NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+	if(!bundle) {
+		LOG_ERROR(@"ERROR: populateImageCacheIfNeeded, cannot find our bundle");
+		return;
+	}
+
 	{
-		NSImage* img = [NSImage imageNamed:@"go_back" forClass:[self class]];
+		NSImage* img = [bundle imageForResource:@"go_back"];
 		[m_image_cache setImage:img forTag:ICON_GO_BACK];
 	}
 	{
-		NSImage* img = [NSImage imageNamed:@"SmallGenericDocumentIcon" forClass:[self class]];
+		NSImage* img = [bundle imageForResource:@"SmallGenericDocumentIcon"];
 		[m_image_cache setImage:img forTag:ICON_FILE];
 	}
 	{
-		NSImage* img = [NSImage imageNamed:@"SmallGenericFolderIcon" forClass:[self class]];
+		NSImage* img = [bundle imageForResource:@"SmallGenericFolderIcon"];
 		[m_image_cache setImage:img forTag:ICON_DIR];
 	}
 	{
-		NSImage* img = [NSImage imageNamed:@"unknown" forClass:[self class]];
+		NSImage* img = [bundle imageForResource:@"unknown"];
 		[m_image_cache setImage:img forTag:ICON_UNKNOWN];
 	}
 	{
-		NSImage* img = [NSImage imageNamed:@"SmallGenericDocumentIconLink" forClass:[self class]];
+		NSImage* img = [bundle imageForResource:@"SmallGenericDocumentIconLink"];
 		[m_image_cache setImage:img forTag:ICON_LINK_TO_FILE];
 	}
 	{
-		NSImage* img = [NSImage imageNamed:@"SmallGenericFolderIconLink" forClass:[self class]];
+		NSImage* img = [bundle imageForResource:@"SmallGenericFolderIconLink"];
 		[m_image_cache setImage:img forTag:ICON_LINK_TO_DIR];
 	}
 	{
-		NSImage* img = [NSImage imageNamed:@"unknown_link" forClass:[self class]];
+		NSImage* img = [bundle imageForResource:@"unknown_link"];
 		[m_image_cache setImage:img forTag:ICON_LINK_TO_UNKNOWN];
 	}
 	// LOG_DEBUG(@"image cache is now initialized");
