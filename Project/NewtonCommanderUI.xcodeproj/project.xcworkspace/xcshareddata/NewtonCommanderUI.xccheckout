@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8D079081-2A45-4FB3-9099-8F6D7F4CE3F6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NewtonCommanderUI</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6140871B-286E-4362-8C06-1F12D376FB3D</key>
+		<string>https://github.com/neoneye/newton-commander-ui.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Project/NewtonCommanderUI.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6140871B-286E-4362-8C06-1F12D376FB3D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/neoneye/newton-commander-ui.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6140871B-286E-4362-8C06-1F12D376FB3D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6140871B-286E-4362-8C06-1F12D376FB3D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>opcoders_commander_ui</string>
+		</dict>
+	</array>
+</dict>
+</plist>

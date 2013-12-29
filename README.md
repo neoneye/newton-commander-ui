@@ -1,7 +1,11 @@
 # newton-commander-ui
 
-[![Version](http://cocoapod-badges.herokuapp.com/v/newton-commander-ui/badge.png)](http://cocoadocs.org/docsets/newton-commander-ui)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/newton-commander-ui/badge.png)](http://cocoadocs.org/docsets/newton-commander-ui)
+The UI controls that is used throughout the Newton Commander app.
+
+Content:
+- Homemade UI controls
+- 3rd party UI controls that are slightly adjusted for Newton Commander
+- 3rd party UI controls that have not been altered
 
 ## Usage
 
@@ -11,14 +15,15 @@ To run the example project; clone the repo, and run `pod install` from the Proje
 
 ## Installation
 
-newton-commander-ui is available through [CocoaPods](http://cocoapods.org), to install
-it simply add the following line to your Podfile:
+newton-commander-ui is not yet available through [CocoaPods](http://cocoapods.org). 
 
-    pod "newton-commander-ui"
+To install it simply add the following line to your Podfile:
+
+    pod "newton-commander-ui", :git => 'https://github.com/neoneye/newton-commander-ui.git'
 
 ## Author
 
-Simon Strandgaard, neoneye@gmail.com
+Simon Strandgaard, simon@opcoders.com
 
 ## License
 

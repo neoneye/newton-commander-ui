@@ -1,7 +1,8 @@
-pod "newton-commander-ui", :path => "../newton-commander-ui.podspec"
+platform :osx, '10.9'
+
+xcodeproj "NewtonCommanderUI"
 
 target "Demo" do
+  pod "newton-commander-ui", :path => "../newton-commander-ui.podspec"
 end
 
-target "DemoTests" do
-end
