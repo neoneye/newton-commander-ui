@@ -1,0 +1,7 @@
+pod "newton-commander-ui", :path => "../newton-commander-ui.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
