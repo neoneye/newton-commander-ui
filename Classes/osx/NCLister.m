@@ -74,6 +74,7 @@ names1
 #import "NCImageCache.h"
 #import "NCListerCell.h"
 #import "NSMutableArray+Shuffling.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 
 
 // #define IMPROVED_BACKSPACE
@@ -400,8 +401,7 @@ BOOL is_the_cocoa_simulator_running() {
 	
 	[self setImageCache:[[NCImageCache alloc] init]];
 
-	NSString *bundlePath = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"NewtonCommanderUI.bundle"];
-	NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
 	if(!bundle) {
 		LOG_ERROR(@"ERROR: populateImageCacheIfNeeded, cannot find our bundle");
 		return;

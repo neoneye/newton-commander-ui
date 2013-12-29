@@ -11,6 +11,7 @@
 
 
 #import "NCGotoFolderController.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 
 
 @implementation NCGotoFolderController
@@ -27,9 +28,8 @@
 }
 
 - (id)init {
-	NSBundle* bundle = [NSBundle bundleForClass:[self class]];
-	NSAssert(bundle, @"must be in the framework bundle");
-	NSString* path = [bundle pathForResource:@"GotoFolder" ofType:@"nib"];
+	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
+	NSString *path = [bundle pathForResource:@"GotoFolder" ofType:@"nib"];
 	NSAssert(path, @"nib is not found in the framework bundle");
     self = [super initWithWindowNibPath:path owner:self];
 	if(self) {

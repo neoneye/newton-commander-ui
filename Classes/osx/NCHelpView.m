@@ -12,6 +12,7 @@
 
 #import "NCLog.h"
 #import "NCHelpView.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 
 
 @implementation NCHelpObject
@@ -69,21 +70,14 @@
 {
 	filename = @"some file name";
 	
-	NSBundle* our_bundle = [NSBundle bundleForClass:[self class]];
-	if(!our_bundle) {
-		LOG_ERROR(@"ERROR: infoview, cannot find our bundle");
-		return;
-	}
-	
-	NSString* path = [our_bundle pathForResource:@"test" ofType:@"html"];
-	if(!path) {
+	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
+	NSURL *url = [bundle URLForResource:@"test" withExtension:@"html"];
+	if(!url) {
 		LOG_ERROR(@"ERROR: infoview, cannot obtain path for resource");
 		return;
 	}
 
 	LOG_DEBUG(@"%s : html file was found", object_getClassName(self));
-
-	NSURL* url = [NSURL fileURLWithPath:path];
 	
 	// We'll be our own frame load delegate and receive didFinishLoadForFrame
 	[self setFrameLoadDelegate:self];

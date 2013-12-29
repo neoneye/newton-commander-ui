@@ -40,6 +40,7 @@ NSData *bookmarkData = [src bookmarkDataWithOptions:NSURLBookmarkCreationSuitabl
 
 #import "NCLog.h"
 #import "NCMakeLinkController.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 
 
 @implementation NCMakeLinkController
@@ -58,9 +59,8 @@ NSData *bookmarkData = [src bookmarkDataWithOptions:NSURLBookmarkCreationSuitabl
 }
 
 - (id)init {
-	NSBundle* bundle = [NSBundle bundleForClass:[self class]];
-	NSAssert(bundle, @"must be in the framework bundle");
-	NSString* path = [bundle pathForResource:@"MakeLink" ofType:@"nib"];
+	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
+	NSString *path = [bundle pathForResource:@"MakeLink" ofType:@"nib"];
 	NSAssert(path, @"nib is not found in the framework bundle");
     self = [super initWithWindowNibPath:path owner:self];
 	if(self) {

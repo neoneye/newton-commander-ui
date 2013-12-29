@@ -12,6 +12,7 @@
 
 #import "NCLog.h"
 #import "NCMakeFileController.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 
 
 @implementation NCMakeFileController
@@ -29,9 +30,8 @@
 }
 
 - (id)init {
-	NSBundle* bundle = [NSBundle bundleForClass:[self class]];
-	NSAssert(bundle, @"must be in the framework bundle");
-	NSString* path = [bundle pathForResource:@"MakeFile" ofType:@"nib"];
+	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
+	NSString *path = [bundle pathForResource:@"MakeFile" ofType:@"nib"];
 	NSAssert(path, @"nib is not found in the framework bundle");
     self = [super initWithWindowNibPath:path owner:self];
 	if(self) {
