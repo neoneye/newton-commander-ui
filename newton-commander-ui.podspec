@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "newton-commander-ui"
-  s.version      = "0.1.3"
+  s.version      = "0.1.4"
   s.summary      = "The UI controls that is used throughout the Newton Commander app"
   s.description  = <<-DESC
     Content:
@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/osx/*.{h,m}'
   s.resource_bundles = { 'NewtonCommanderUI' => "NewtonCommanderUIBundle/*" }
+  s.resources    = 'Assets/*.png'
 
   s.ios.exclude_files = 'Classes/osx'
   s.osx.exclude_files = 'Classes/ios', 'Classes/osx/*Test.*'

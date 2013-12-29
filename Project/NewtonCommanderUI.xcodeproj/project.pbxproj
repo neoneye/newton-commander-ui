@@ -23,6 +23,30 @@
 		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		42271FB511D14AE700E5FFE1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		422F205311A851420029C47A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		426668F91870E28F00F16FB0 /* cd_parent_dir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cd_parent_dir.png; sourceTree = "<group>"; };
+		426668FA1870E28F00F16FB0 /* cd_parent_dir2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cd_parent_dir2.png; sourceTree = "<group>"; };
+		426668FB1870E28F00F16FB0 /* go_back.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = go_back.icns; sourceTree = "<group>"; };
+		426668FC1870E28F00F16FB0 /* go_back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go_back1.png; sourceTree = "<group>"; };
+		426668FD1870E28F00F16FB0 /* GotoFolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotoFolder.xib; sourceTree = "<group>"; };
+		426668FE1870E28F00F16FB0 /* MakeDir.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeDir.xib; sourceTree = "<group>"; };
+		426668FF1870E28F00F16FB0 /* MakeFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeFile.xib; sourceTree = "<group>"; };
+		426669001870E28F00F16FB0 /* MakeLink.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeLink.xib; sourceTree = "<group>"; };
+		426669011870E28F00F16FB0 /* PreferencesAdvanced.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesAdvanced.xib; sourceTree = "<group>"; };
+		426669021870E28F00F16FB0 /* PreferencesBookmark.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesBookmark.xib; sourceTree = "<group>"; };
+		426669031870E28F00F16FB0 /* PreferencesGeneral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesGeneral.xib; sourceTree = "<group>"; };
+		426669041870E28F00F16FB0 /* PreferencesMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesMenu.xib; sourceTree = "<group>"; };
+		426669051870E28F00F16FB0 /* SmallGenericDocumentIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericDocumentIcon.png; sourceTree = "<group>"; };
+		426669061870E28F00F16FB0 /* SmallGenericDocumentIconLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericDocumentIconLink.png; sourceTree = "<group>"; };
+		426669071870E28F00F16FB0 /* SmallGenericFolderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericFolderIcon.png; sourceTree = "<group>"; };
+		426669081870E28F00F16FB0 /* SmallGenericFolderIconLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericFolderIconLink.png; sourceTree = "<group>"; };
+		426669091870E28F00F16FB0 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		4266690A1870E28F00F16FB0 /* unknown_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown_link.png; sourceTree = "<group>"; };
+		4266690B1870E28F00F16FB0 /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
+		426669201870E2AA00F16FB0 /* AppearancePreferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppearancePreferences.png; sourceTree = "<group>"; };
+		426669211870E2AA00F16FB0 /* bookmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark_icon.png; sourceTree = "<group>"; };
+		426669221870E2AA00F16FB0 /* FontsColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FontsColors.png; sourceTree = "<group>"; };
+		426669231870E2AA00F16FB0 /* mkdir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkdir.png; sourceTree = "<group>"; };
+		426669241870E2AA00F16FB0 /* mkfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkfile.png; sourceTree = "<group>"; };
 		428DCD3311E52DB80048B3C6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		42A97A53186FDBF400CDE1D3 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
 		42A97A54186FDBF400CDE1D3 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
@@ -125,30 +149,6 @@
 		42A97AB5186FDBF500CDE1D3 /* NSView+SubviewExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+SubviewExtensions.m"; sourceTree = "<group>"; };
 		42A97AB6186FDBF500CDE1D3 /* VerticalLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalLayoutView.h; sourceTree = "<group>"; };
 		42A97AB7186FDBF500CDE1D3 /* VerticalLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalLayoutView.m; sourceTree = "<group>"; };
-		42A97AEA186FDC3100CDE1D3 /* AppearancePreferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppearancePreferences.png; sourceTree = "<group>"; };
-		42A97AEB186FDC3100CDE1D3 /* bookmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark_icon.png; sourceTree = "<group>"; };
-		42A97AEC186FDC3100CDE1D3 /* cd_parent_dir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cd_parent_dir.png; sourceTree = "<group>"; };
-		42A97AED186FDC3100CDE1D3 /* cd_parent_dir2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cd_parent_dir2.png; sourceTree = "<group>"; };
-		42A97AEE186FDC3100CDE1D3 /* FontsColors.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = FontsColors.tiff; sourceTree = "<group>"; };
-		42A97AEF186FDC3100CDE1D3 /* go_back.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = go_back.icns; sourceTree = "<group>"; };
-		42A97AF0186FDC3100CDE1D3 /* go_back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go_back1.png; sourceTree = "<group>"; };
-		42A97AF1186FDC3100CDE1D3 /* GotoFolder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GotoFolder.xib; sourceTree = "<group>"; };
-		42A97AF2186FDC3100CDE1D3 /* MakeDir.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeDir.xib; sourceTree = "<group>"; };
-		42A97AF3186FDC3100CDE1D3 /* MakeFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeFile.xib; sourceTree = "<group>"; };
-		42A97AF4186FDC3100CDE1D3 /* MakeLink.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MakeLink.xib; sourceTree = "<group>"; };
-		42A97AF5186FDC3100CDE1D3 /* mkdir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkdir.png; sourceTree = "<group>"; };
-		42A97AF6186FDC3100CDE1D3 /* mkfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkfile.png; sourceTree = "<group>"; };
-		42A97AF7186FDC3100CDE1D3 /* PreferencesAdvanced.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesAdvanced.xib; sourceTree = "<group>"; };
-		42A97AF8186FDC3100CDE1D3 /* PreferencesBookmark.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesBookmark.xib; sourceTree = "<group>"; };
-		42A97AF9186FDC3100CDE1D3 /* PreferencesGeneral.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesGeneral.xib; sourceTree = "<group>"; };
-		42A97AFA186FDC3100CDE1D3 /* PreferencesMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesMenu.xib; sourceTree = "<group>"; };
-		42A97AFB186FDC3100CDE1D3 /* SmallGenericDocumentIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericDocumentIcon.png; sourceTree = "<group>"; };
-		42A97AFC186FDC3100CDE1D3 /* SmallGenericDocumentIconLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericDocumentIconLink.png; sourceTree = "<group>"; };
-		42A97AFD186FDC3100CDE1D3 /* SmallGenericFolderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericFolderIcon.png; sourceTree = "<group>"; };
-		42A97AFE186FDC3100CDE1D3 /* SmallGenericFolderIconLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmallGenericFolderIconLink.png; sourceTree = "<group>"; };
-		42A97AFF186FDC3100CDE1D3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
-		42A97B00186FDC3100CDE1D3 /* unknown_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown_link.png; sourceTree = "<group>"; };
-		42A97B01186FDC3200CDE1D3 /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
 		42B200711870ACD700208D1A /* NSBundle+NewtonCommanderUIBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+NewtonCommanderUIBundle.h"; sourceTree = "<group>"; };
 		42B200721870ACD700208D1A /* NSBundle+NewtonCommanderUIBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+NewtonCommanderUIBundle.m"; sourceTree = "<group>"; };
 		42C1556B115615B7000A0547 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -186,6 +186,7 @@
 		0259C574FE90428111CA0C5A /* NCToolkit */ = {
 			isa = PBXGroup;
 			children = (
+				4266691F1870E2AA00F16FB0 /* Assets */,
 				42A97AE9186FDC0800CDE1D3 /* Resources */,
 				422F201A11A84E730029C47A /* source */,
 				42DF9215186FDCF900B26412 /* Demo */,
@@ -350,33 +351,41 @@
 			path = ../Classes/osx;
 			sourceTree = "<group>";
 		};
+		4266691F1870E2AA00F16FB0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				426669201870E2AA00F16FB0 /* AppearancePreferences.png */,
+				426669211870E2AA00F16FB0 /* bookmark_icon.png */,
+				426669221870E2AA00F16FB0 /* FontsColors.png */,
+				426669231870E2AA00F16FB0 /* mkdir.png */,
+				426669241870E2AA00F16FB0 /* mkfile.png */,
+			);
+			name = Assets;
+			path = ../Assets;
+			sourceTree = "<group>";
+		};
 		42A97AE9186FDC0800CDE1D3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				42A97AEA186FDC3100CDE1D3 /* AppearancePreferences.png */,
-				42A97AEB186FDC3100CDE1D3 /* bookmark_icon.png */,
-				42A97AEC186FDC3100CDE1D3 /* cd_parent_dir.png */,
-				42A97AED186FDC3100CDE1D3 /* cd_parent_dir2.png */,
-				42A97AEE186FDC3100CDE1D3 /* FontsColors.tiff */,
-				42A97AEF186FDC3100CDE1D3 /* go_back.icns */,
-				42A97AF0186FDC3100CDE1D3 /* go_back1.png */,
-				42A97AF1186FDC3100CDE1D3 /* GotoFolder.xib */,
-				42A97AF2186FDC3100CDE1D3 /* MakeDir.xib */,
-				42A97AF3186FDC3100CDE1D3 /* MakeFile.xib */,
-				42A97AF4186FDC3100CDE1D3 /* MakeLink.xib */,
-				42A97AF5186FDC3100CDE1D3 /* mkdir.png */,
-				42A97AF6186FDC3100CDE1D3 /* mkfile.png */,
-				42A97AF7186FDC3100CDE1D3 /* PreferencesAdvanced.xib */,
-				42A97AF8186FDC3100CDE1D3 /* PreferencesBookmark.xib */,
-				42A97AF9186FDC3100CDE1D3 /* PreferencesGeneral.xib */,
-				42A97AFA186FDC3100CDE1D3 /* PreferencesMenu.xib */,
-				42A97AFB186FDC3100CDE1D3 /* SmallGenericDocumentIcon.png */,
-				42A97AFC186FDC3100CDE1D3 /* SmallGenericDocumentIconLink.png */,
-				42A97AFD186FDC3100CDE1D3 /* SmallGenericFolderIcon.png */,
-				42A97AFE186FDC3100CDE1D3 /* SmallGenericFolderIconLink.png */,
-				42A97AFF186FDC3100CDE1D3 /* test.html */,
-				42A97B00186FDC3100CDE1D3 /* unknown_link.png */,
-				42A97B01186FDC3200CDE1D3 /* unknown.png */,
+				426668F91870E28F00F16FB0 /* cd_parent_dir.png */,
+				426668FA1870E28F00F16FB0 /* cd_parent_dir2.png */,
+				426668FB1870E28F00F16FB0 /* go_back.icns */,
+				426668FC1870E28F00F16FB0 /* go_back1.png */,
+				426668FD1870E28F00F16FB0 /* GotoFolder.xib */,
+				426668FE1870E28F00F16FB0 /* MakeDir.xib */,
+				426668FF1870E28F00F16FB0 /* MakeFile.xib */,
+				426669001870E28F00F16FB0 /* MakeLink.xib */,
+				426669011870E28F00F16FB0 /* PreferencesAdvanced.xib */,
+				426669021870E28F00F16FB0 /* PreferencesBookmark.xib */,
+				426669031870E28F00F16FB0 /* PreferencesGeneral.xib */,
+				426669041870E28F00F16FB0 /* PreferencesMenu.xib */,
+				426669051870E28F00F16FB0 /* SmallGenericDocumentIcon.png */,
+				426669061870E28F00F16FB0 /* SmallGenericDocumentIconLink.png */,
+				426669071870E28F00F16FB0 /* SmallGenericFolderIcon.png */,
+				426669081870E28F00F16FB0 /* SmallGenericFolderIconLink.png */,
+				426669091870E28F00F16FB0 /* test.html */,
+				4266690A1870E28F00F16FB0 /* unknown_link.png */,
+				4266690B1870E28F00F16FB0 /* unknown.png */,
 			);
 			name = Resources;
 			path = ../NewtonCommanderUIBundle;
