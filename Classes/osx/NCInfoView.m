@@ -68,7 +68,8 @@
 {
 	filename = @"some file name";
 	
-	NSBundle* our_bundle = [NSBundle bundleForClass:[self class]];
+	NSString *bundlePath = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"NewtonCommanderUI.bundle"];
+	NSBundle *our_bundle = [NSBundle bundleWithPath:bundlePath];
 	if(!our_bundle) {
 		LOG_ERROR(@"ERROR: infoview, cannot find our bundle");
 		return;
