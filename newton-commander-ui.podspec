@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "newton-commander-ui"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "The UI controls that is used throughout the Newton Commander app"
   s.description  = <<-DESC
     Content:

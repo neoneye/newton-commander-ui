@@ -816,6 +816,18 @@ BOOL is_the_cocoa_simulator_running() {
 	// TODO: make an attempt at restoring the scroll position
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+	if (![NSThread isMainThread]) {
+		[self performSelectorOnMainThread:@selector(reloadTableSetup) withObject:nil waitUntilDone:NO];
+	} else {
+		[self reloadTableSetup];
+	}
+}
+
 
 - (void)setValue:(id)value forKey:(NSString *)key {
 	// LOG_DEBUG(@"NCLister setValue:%@ forKey:%@", value, key);
