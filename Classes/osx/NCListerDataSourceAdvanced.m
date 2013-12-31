@@ -53,11 +53,10 @@ IDEA: I need a better name than NCListerDataSourceAdvanced... some ideas:
 		m_items = nil;
 		m_profiler = [[NCTimeProfilerSetWorkingDir alloc] init];
 		
-		NSString *label = @"TODO_insert_label_here";
 		if (pathToWorker) {
-			m_worker = [[NCWorker alloc] initWithController:self label:label pathToWorker:pathToWorker];
+			m_worker = [[NCWorker alloc] initWithController:self pathToWorker:pathToWorker];
 		} else {
-			m_worker = [[NCWorker alloc] initWithController:self label:label];
+			m_worker = [[NCWorker alloc] initWithController:self];
 		}
 		
 		m_copy_operation_names = nil;
