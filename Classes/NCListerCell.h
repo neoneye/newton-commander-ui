@@ -1,9 +1,6 @@
 //
-//  NCListerCell.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 18/09/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCListerCell.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

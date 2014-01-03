@@ -1,6 +1,6 @@
 //
-//  NSBundle+NewtonCommanderUIBundle.h
-//  NewtonCommander
+// NSBundle+NewtonCommanderUIBundle.h
+// NewtonCommander
 //
 
 #import <Foundation/Foundation.h>

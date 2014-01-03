@@ -1,9 +1,6 @@
 //
-//  NCListerItem.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 17/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCListerItem.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

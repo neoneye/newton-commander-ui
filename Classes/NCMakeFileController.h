@@ -4,11 +4,8 @@ IDEA: merge with NCMakeDirController
 IDEA: merge with NCMakeLinkController
 */
 //
-//  NCMakeFileController.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 24/04/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCMakeFileController.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

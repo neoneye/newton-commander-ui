@@ -1,9 +1,6 @@
 //
-//  NCPreferencesAdvancedController.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 20/03/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCPreferencesAdvancedController.h
+// Newton Commander
 //
 
 #import "MBPreferencesController.h"

@@ -1,9 +1,6 @@
 //
-//  NCImageCache.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 25/08/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCImageCache.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

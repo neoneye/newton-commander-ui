@@ -1,9 +1,6 @@
 //
-//  NSTableView+ColumnLayout.h
-//  cocoa_clickable_headercell
-//
-//  Created by Simon Strandgaard on 04/04/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+// NSTableView+ColumnLayout.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

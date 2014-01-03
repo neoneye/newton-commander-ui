@@ -1,9 +1,6 @@
 //
-//  NCSplitView.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 18/04/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCSplitView.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

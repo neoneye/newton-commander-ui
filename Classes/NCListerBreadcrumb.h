@@ -1,9 +1,6 @@
 //
-//  NCListerBreadcrumb.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 20/03/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCListerBreadcrumb.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

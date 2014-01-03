@@ -1,9 +1,6 @@
 //
-//  NCCopyOperationDummy.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 22/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCCopyOperationDummy.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

@@ -1,9 +1,6 @@
 //
-//  NCListerDataSource.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 10/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCListerDataSource.h
+// Newton Commander
 //
 
 // forward

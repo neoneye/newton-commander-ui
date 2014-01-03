@@ -1,9 +1,6 @@
 //
-//  NCDeleteSheet.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 28/04/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCDeleteSheet.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

@@ -1,9 +1,6 @@
 //
-//  NCTableHeaderCell.h
-//  cocoa_clickable_headercell
-//
-//  Created by Simon Strandgaard on 01/04/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+// NCTableHeaderCell.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

@@ -1,9 +1,6 @@
 //
-//  LayoutView.h
-//  Layouter
-//
-//  Created by Simon Strandgaard on 6/23/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+// VerticalLayoutView.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

@@ -1,9 +1,6 @@
 //
-//  NCCommon.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 18/03/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCCommon.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

@@ -1,9 +1,6 @@
 //
-//  NCDateCell.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 14/08/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCDateCell.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

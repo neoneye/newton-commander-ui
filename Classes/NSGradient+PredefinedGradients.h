@@ -1,9 +1,6 @@
 //
-//  NSGradient+ThemeExtensions.h
-//  cocoa_clickable_headercell
-//
-//  Created by Simon Strandgaard on 03/04/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+// NSGradient+ThemeExtensions.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

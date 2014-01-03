@@ -1,9 +1,6 @@
 //
-//  NSGradient+ThemeExtensions.m
-//  cocoa_clickable_headercell
-//
-//  Created by Simon Strandgaard on 03/04/10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+// NSGradient+ThemeExtensions.m
+// Newton Commander
 //
 #if ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).

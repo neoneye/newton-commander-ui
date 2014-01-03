@@ -1,9 +1,6 @@
 //
-//  NSTabView+SwitchExtensions.m
-//  NCCore
-//
-//  Created by Simon Strandgaard on 03/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NSTabView+SwitchExtensions.m
+// Newton Commander
 //
 
 #import "NSTabView+SwitchExtensions.h"

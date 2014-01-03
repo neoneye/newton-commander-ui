@@ -1,9 +1,6 @@
 //
-//  NCPermissionCell.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 24/05/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCPermissionCell.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

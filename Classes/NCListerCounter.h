@@ -1,9 +1,6 @@
 //
-//  NCListerCounter.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 15/02/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCListerCounter.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

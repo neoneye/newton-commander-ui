@@ -1,9 +1,6 @@
 //
-//  NCBackground.m
-//  NCCore
-//
-//  Created by Simon Strandgaard on 01/02/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCBackground.m
+// Newton Commander
 //
 #if ! __has_feature(objc_arc)
 #error This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).

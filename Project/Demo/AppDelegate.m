@@ -1,9 +1,6 @@
 //
-//  AppDelegate.m
-//  Demo
-//
-//  Created by Simon Strandgaard on 29/12/13.
-//
+// AppDelegate.m
+// Newton Commander
 //
 
 #import "AppDelegate.h"

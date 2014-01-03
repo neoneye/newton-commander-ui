@@ -1,9 +1,6 @@
 //
-//  NCVolumeStatus.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 04/08/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCVolumeStatus.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

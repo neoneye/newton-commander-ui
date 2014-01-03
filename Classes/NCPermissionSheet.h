@@ -1,9 +1,6 @@
 //
-//  NCPermissionSheet.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 13/09/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCPermissionSheet.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

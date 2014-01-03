@@ -1,9 +1,6 @@
 //
-//  NCListerDataSourceAdvanced.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 10/07/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCListerDataSourceAdvanced.h
+// Newton Commander
 //
 #import "NCListerDataSource.h"
 #import "NCWorker.h"

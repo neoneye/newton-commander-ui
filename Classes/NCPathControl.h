@@ -1,9 +1,6 @@
 //
-//  NCPathControl.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 02/08/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCPathControl.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

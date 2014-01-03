@@ -1,9 +1,6 @@
 //
-//  NCPreferencesBookmarkController.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 22/04/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCPreferencesBookmarkController.h
+// Newton Commander
 //
 
 #import "MBPreferencesController.h"

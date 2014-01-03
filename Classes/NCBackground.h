@@ -1,9 +1,6 @@
 //
-//  NCBackground.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 01/02/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCBackground.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

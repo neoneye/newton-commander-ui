@@ -1,9 +1,6 @@
 //
-//  NCPreferencesMenuController.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 24/03/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCPreferencesMenuController.h
+// Newton Commander
 //
 
 #import "MBPreferencesController.h"

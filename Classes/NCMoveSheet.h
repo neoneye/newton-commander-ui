@@ -1,9 +1,6 @@
 //
-//  NCMoveSheet.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 14/08/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCMoveSheet.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>

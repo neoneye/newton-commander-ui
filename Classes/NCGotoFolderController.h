@@ -1,9 +1,6 @@
 //
-//  NCGotoFolderController.h
-//  NCCore
-//
-//  Created by Simon Strandgaard on 23/05/10.
-//  Copyright 2010 opcoders.com. All rights reserved.
+// NCGotoFolderController.h
+// Newton Commander
 //
 
 #import <Cocoa/Cocoa.h>
