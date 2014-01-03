@@ -6,3 +6,7 @@ target "Demo" do
   pod "newton-commander-ui", :path => "../newton-commander-ui.podspec"
 end
 
+target "Tests" do
+  pod "newton-commander-ui", :path => "../newton-commander-ui.podspec"
+end
+
