@@ -42,11 +42,11 @@ in case someone have second thoughts.
 -(void)beginSheetForWindow:(NSWindow*)window {
 	//NSLog(@"deleteController %s %@", _cmd, m_paths);
 	
-	int n_items = [m_paths count];
+	NSUInteger n_items = [m_paths count];
 	if(n_items < 1) return;
 	
 	NSString* msg = @"Delete the item?";
-	msg = [NSString stringWithFormat:@"Delete %i items?", n_items];
+	msg = [NSString stringWithFormat:@"Delete %i items?", (int)n_items];
 
 	NSAlert *alert = [[NSAlert alloc] init];
 	[alert addButtonWithTitle:@"OK"];
