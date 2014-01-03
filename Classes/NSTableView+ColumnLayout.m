@@ -34,7 +34,7 @@
 	NSTableView* tv = self;
 	NSEnumerator* enumerator = [ary objectEnumerator];
 	NSDictionary* dict;
-	int column_index = 0;
+	NSInteger column_index = 0;
 	while(dict = [enumerator nextObject]) {
 		NSString* v_identifier = [dict objectForKey:@"identifier"];
 		float v_width = [[dict objectForKey:@"width"] floatValue];
@@ -44,12 +44,12 @@
 		if(!col) continue;
 
 		// Ensure proper column location
-		int current_index = [tv columnWithIdentifier:v_identifier];
-		int desired_index = column_index;
+		NSInteger current_index = [tv columnWithIdentifier:v_identifier];
+		NSInteger desired_index = column_index;
 		[tv moveColumn:current_index toColumn:desired_index];
 		
 		// Adjust width and hidden flag
-		int mask = [col resizingMask];		
+		NSUInteger mask = [col resizingMask];
 		[col setResizingMask:0];
 		[col setWidth:v_width];
 		[col setHidden:v_hidden];
