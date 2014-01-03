@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2271B309-5EA7-4BD2-B292-A731DD6299EC</string>
+	<string>B9979DEC-6165-4EE5-B39A-4AD53B0836C6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NewtonCommanderUI</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>A4A6F500-F072-4C74-9F47-A7CAEE86BDB6</key>
+		<key>44F29452-B934-4CF8-B804-3F55C314AD91</key>
 		<string>https://github.com/neoneye/newton-commander-ui.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Project/NewtonCommanderUI.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>A4A6F500-F072-4C74-9F47-A7CAEE86BDB6</key>
+		<key>44F29452-B934-4CF8-B804-3F55C314AD91</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>A4A6F500-F072-4C74-9F47-A7CAEE86BDB6</string>
+	<string>44F29452-B934-4CF8-B804-3F55C314AD91</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>A4A6F500-F072-4C74-9F47-A7CAEE86BDB6</string>
+			<string>44F29452-B934-4CF8-B804-3F55C314AD91</string>
 			<key>IDESourceControlWCCName</key>
 			<string>opcoders_commander_ui</string>
 		</dict>
