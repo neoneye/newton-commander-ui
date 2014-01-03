@@ -16,6 +16,7 @@
 #import "NCMoveOperationDummy.h"
 #import "NCCommon.h"
 #import "NCPathControl.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 
 
 @implementation NCMoveSheetItem
@@ -91,9 +92,8 @@
 }
 
 - (id)init {
-	NSBundle* bundle = [NSBundle mainBundle];
-	NSAssert(bundle, @"must be in the framework bundle");
-	NSString* path = [bundle pathForResource:@"MoveSheet" ofType:@"nib"];
+	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
+	NSString *path = [bundle pathForResource:@"MoveSheet" ofType:@"nib"];
 	NSAssert(path, @"nib is not found in the framework bundle");
     self = [super initWithWindowNibPath:path owner:self];
 	if(self) {

@@ -16,6 +16,7 @@
 #import "NCCopyOperationDummy.h"
 #import "NCCommon.h"
 #import "NCPathControl.h"
+#import "NSBundle+NewtonCommanderUIBundle.h"
 // #import <QuartzCore/CAAnimation.h>
 // #import <QuartzCore/QuartzCore.h>
 
@@ -95,9 +96,8 @@
 }
 
 - (id)init {
-	NSBundle* bundle = [NSBundle mainBundle];
-	NSAssert(bundle, @"must be in the framework bundle");
-	NSString* path = [bundle pathForResource:@"CopySheet" ofType:@"nib"];
+	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
+	NSString *path = [bundle pathForResource:@"CopySheet" ofType:@"nib"];
 	NSAssert(path, @"nib is not found in the framework bundle");
     self = [super initWithWindowNibPath:path owner:self];
 	if(self) {
