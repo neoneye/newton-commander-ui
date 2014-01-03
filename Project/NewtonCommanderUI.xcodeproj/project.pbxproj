@@ -47,110 +47,11 @@
 		426669221870E2AA00F16FB0 /* FontsColors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FontsColors.png; sourceTree = "<group>"; };
 		426669231870E2AA00F16FB0 /* mkdir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkdir.png; sourceTree = "<group>"; };
 		426669241870E2AA00F16FB0 /* mkfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mkfile.png; sourceTree = "<group>"; };
+		4282E83B1876C41300A98954 /* NCCommonTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCCommonTest.h; sourceTree = "<group>"; };
+		4282E83C1876C41300A98954 /* NCCommonTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCCommonTest.m; sourceTree = "<group>"; };
+		4282E83D1876C41300A98954 /* NSArray+PrependPathTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+PrependPathTest.h"; sourceTree = "<group>"; };
+		4282E83E1876C41300A98954 /* NSArray+PrependPathTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PrependPathTest.m"; sourceTree = "<group>"; };
 		428DCD3311E52DB80048B3C6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		42A97A53186FDBF400CDE1D3 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
-		42A97A54186FDBF400CDE1D3 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
-		42A97A55186FDBF400CDE1D3 /* MBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPreferencesController.h; sourceTree = "<group>"; };
-		42A97A56186FDBF400CDE1D3 /* MBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPreferencesController.m; sourceTree = "<group>"; };
-		42A97A57186FDBF400CDE1D3 /* NCBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCBackground.h; sourceTree = "<group>"; };
-		42A97A58186FDBF400CDE1D3 /* NCBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCBackground.m; sourceTree = "<group>"; };
-		42A97A59186FDBF400CDE1D3 /* NCCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCommon.h; sourceTree = "<group>"; };
-		42A97A5A186FDBF400CDE1D3 /* NCCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCommon.m; sourceTree = "<group>"; };
-		42A97A5B186FDBF400CDE1D3 /* NCCommonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCommonTest.h; sourceTree = "<group>"; };
-		42A97A5C186FDBF400CDE1D3 /* NCCommonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCommonTest.m; sourceTree = "<group>"; };
-		42A97A5D186FDBF400CDE1D3 /* NCCopyOperationDummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCopyOperationDummy.h; sourceTree = "<group>"; };
-		42A97A5E186FDBF400CDE1D3 /* NCCopyOperationDummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCopyOperationDummy.m; sourceTree = "<group>"; };
-		42A97A5F186FDBF400CDE1D3 /* NCCopyOperationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCopyOperationProtocol.h; sourceTree = "<group>"; };
-		42A97A60186FDBF400CDE1D3 /* NCCopySheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCCopySheet.h; sourceTree = "<group>"; };
-		42A97A61186FDBF400CDE1D3 /* NCCopySheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCCopySheet.m; sourceTree = "<group>"; };
-		42A97A62186FDBF400CDE1D3 /* NCDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDateCell.h; sourceTree = "<group>"; };
-		42A97A63186FDBF400CDE1D3 /* NCDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDateCell.m; sourceTree = "<group>"; };
-		42A97A64186FDBF400CDE1D3 /* NCDeleteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCDeleteSheet.h; sourceTree = "<group>"; };
-		42A97A65186FDBF400CDE1D3 /* NCDeleteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCDeleteSheet.m; sourceTree = "<group>"; };
-		42A97A66186FDBF400CDE1D3 /* NCGotoFolderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCGotoFolderController.h; sourceTree = "<group>"; };
-		42A97A67186FDBF400CDE1D3 /* NCGotoFolderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCGotoFolderController.m; sourceTree = "<group>"; };
-		42A97A68186FDBF400CDE1D3 /* NCHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCHelpView.h; sourceTree = "<group>"; };
-		42A97A69186FDBF400CDE1D3 /* NCHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCHelpView.m; sourceTree = "<group>"; };
-		42A97A6A186FDBF400CDE1D3 /* NCImageAndTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImageAndTextCell.h; sourceTree = "<group>"; };
-		42A97A6B186FDBF400CDE1D3 /* NCImageAndTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCImageAndTextCell.m; sourceTree = "<group>"; };
-		42A97A6C186FDBF400CDE1D3 /* NCImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCImageCache.h; sourceTree = "<group>"; };
-		42A97A6D186FDBF400CDE1D3 /* NCImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCImageCache.m; sourceTree = "<group>"; };
-		42A97A6E186FDBF400CDE1D3 /* NCInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCInfoView.h; sourceTree = "<group>"; };
-		42A97A6F186FDBF400CDE1D3 /* NCInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCInfoView.m; sourceTree = "<group>"; };
-		42A97A70186FDBF400CDE1D3 /* NCLister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCLister.h; sourceTree = "<group>"; };
-		42A97A71186FDBF400CDE1D3 /* NCLister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCLister.m; sourceTree = "<group>"; };
-		42A97A72186FDBF400CDE1D3 /* NCListerBreadcrumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerBreadcrumb.h; sourceTree = "<group>"; };
-		42A97A73186FDBF400CDE1D3 /* NCListerBreadcrumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerBreadcrumb.m; sourceTree = "<group>"; };
-		42A97A74186FDBF400CDE1D3 /* NCListerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerCell.h; sourceTree = "<group>"; };
-		42A97A75186FDBF400CDE1D3 /* NCListerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerCell.m; sourceTree = "<group>"; };
-		42A97A76186FDBF500CDE1D3 /* NCListerCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerCounter.h; sourceTree = "<group>"; };
-		42A97A77186FDBF500CDE1D3 /* NCListerCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerCounter.m; sourceTree = "<group>"; };
-		42A97A78186FDBF500CDE1D3 /* NCListerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerDataSource.h; sourceTree = "<group>"; };
-		42A97A79186FDBF500CDE1D3 /* NCListerDataSourceAdvanced.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerDataSourceAdvanced.h; sourceTree = "<group>"; };
-		42A97A7A186FDBF500CDE1D3 /* NCListerDataSourceAdvanced.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerDataSourceAdvanced.m; sourceTree = "<group>"; };
-		42A97A7B186FDBF500CDE1D3 /* NCListerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerItem.h; sourceTree = "<group>"; };
-		42A97A7C186FDBF500CDE1D3 /* NCListerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerItem.m; sourceTree = "<group>"; };
-		42A97A7D186FDBF500CDE1D3 /* NCListerScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerScroller.h; sourceTree = "<group>"; };
-		42A97A7E186FDBF500CDE1D3 /* NCListerScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerScroller.m; sourceTree = "<group>"; };
-		42A97A7F186FDBF500CDE1D3 /* NCListerTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerTableHeaderView.h; sourceTree = "<group>"; };
-		42A97A80186FDBF500CDE1D3 /* NCListerTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerTableHeaderView.m; sourceTree = "<group>"; };
-		42A97A81186FDBF500CDE1D3 /* NCListerTableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerTableTextCell.h; sourceTree = "<group>"; };
-		42A97A82186FDBF500CDE1D3 /* NCListerTableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerTableTextCell.m; sourceTree = "<group>"; };
-		42A97A83186FDBF500CDE1D3 /* NCListerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCListerTableView.h; sourceTree = "<group>"; };
-		42A97A84186FDBF500CDE1D3 /* NCListerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCListerTableView.m; sourceTree = "<group>"; };
-		42A97A85186FDBF500CDE1D3 /* NCMakeDirController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMakeDirController.h; sourceTree = "<group>"; };
-		42A97A86186FDBF500CDE1D3 /* NCMakeDirController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMakeDirController.m; sourceTree = "<group>"; };
-		42A97A87186FDBF500CDE1D3 /* NCMakeFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMakeFileController.h; sourceTree = "<group>"; };
-		42A97A88186FDBF500CDE1D3 /* NCMakeFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMakeFileController.m; sourceTree = "<group>"; };
-		42A97A89186FDBF500CDE1D3 /* NCMakeLinkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMakeLinkController.h; sourceTree = "<group>"; };
-		42A97A8A186FDBF500CDE1D3 /* NCMakeLinkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMakeLinkController.m; sourceTree = "<group>"; };
-		42A97A8B186FDBF500CDE1D3 /* NCMoveOperationDummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMoveOperationDummy.h; sourceTree = "<group>"; };
-		42A97A8C186FDBF500CDE1D3 /* NCMoveOperationDummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMoveOperationDummy.m; sourceTree = "<group>"; };
-		42A97A8D186FDBF500CDE1D3 /* NCMoveOperationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMoveOperationProtocol.h; sourceTree = "<group>"; };
-		42A97A8E186FDBF500CDE1D3 /* NCMoveSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCMoveSheet.h; sourceTree = "<group>"; };
-		42A97A8F186FDBF500CDE1D3 /* NCMoveSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCMoveSheet.m; sourceTree = "<group>"; };
-		42A97A90186FDBF500CDE1D3 /* NCPathControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPathControl.h; sourceTree = "<group>"; };
-		42A97A91186FDBF500CDE1D3 /* NCPathControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPathControl.m; sourceTree = "<group>"; };
-		42A97A92186FDBF500CDE1D3 /* NCPermissionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPermissionCell.h; sourceTree = "<group>"; };
-		42A97A93186FDBF500CDE1D3 /* NCPermissionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPermissionCell.m; sourceTree = "<group>"; };
-		42A97A94186FDBF500CDE1D3 /* NCPermissionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPermissionSheet.h; sourceTree = "<group>"; };
-		42A97A95186FDBF500CDE1D3 /* NCPermissionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPermissionSheet.m; sourceTree = "<group>"; };
-		42A97A96186FDBF500CDE1D3 /* NCPreferencesAdvancedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPreferencesAdvancedController.h; sourceTree = "<group>"; };
-		42A97A97186FDBF500CDE1D3 /* NCPreferencesAdvancedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPreferencesAdvancedController.m; sourceTree = "<group>"; };
-		42A97A98186FDBF500CDE1D3 /* NCPreferencesBookmarkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPreferencesBookmarkController.h; sourceTree = "<group>"; };
-		42A97A99186FDBF500CDE1D3 /* NCPreferencesBookmarkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPreferencesBookmarkController.m; sourceTree = "<group>"; };
-		42A97A9A186FDBF500CDE1D3 /* NCPreferencesGeneralController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPreferencesGeneralController.h; sourceTree = "<group>"; };
-		42A97A9B186FDBF500CDE1D3 /* NCPreferencesGeneralController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPreferencesGeneralController.m; sourceTree = "<group>"; };
-		42A97A9C186FDBF500CDE1D3 /* NCPreferencesMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCPreferencesMenuController.h; sourceTree = "<group>"; };
-		42A97A9D186FDBF500CDE1D3 /* NCPreferencesMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCPreferencesMenuController.m; sourceTree = "<group>"; };
-		42A97A9E186FDBF500CDE1D3 /* NCSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCSplitView.h; sourceTree = "<group>"; };
-		42A97A9F186FDBF500CDE1D3 /* NCSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCSplitView.m; sourceTree = "<group>"; };
-		42A97AA0186FDBF500CDE1D3 /* NCTableHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTableHeaderCell.h; sourceTree = "<group>"; };
-		42A97AA1186FDBF500CDE1D3 /* NCTableHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTableHeaderCell.m; sourceTree = "<group>"; };
-		42A97AA2186FDBF500CDE1D3 /* NCTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTableHeaderView.h; sourceTree = "<group>"; };
-		42A97AA3186FDBF500CDE1D3 /* NCTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTableHeaderView.m; sourceTree = "<group>"; };
-		42A97AA4186FDBF500CDE1D3 /* NCVolumeStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCVolumeStatus.h; sourceTree = "<group>"; };
-		42A97AA5186FDBF500CDE1D3 /* NCVolumeStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCVolumeStatus.m; sourceTree = "<group>"; };
-		42A97AA6186FDBF500CDE1D3 /* NSArray+PrependPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PrependPath.h"; sourceTree = "<group>"; };
-		42A97AA7186FDBF500CDE1D3 /* NSArray+PrependPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PrependPath.m"; sourceTree = "<group>"; };
-		42A97AA8186FDBF500CDE1D3 /* NSArray+PrependPathTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PrependPathTest.h"; sourceTree = "<group>"; };
-		42A97AA9186FDBF500CDE1D3 /* NSArray+PrependPathTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PrependPathTest.m"; sourceTree = "<group>"; };
-		42A97AAA186FDBF500CDE1D3 /* NSGradient+PredefinedGradients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSGradient+PredefinedGradients.h"; sourceTree = "<group>"; };
-		42A97AAB186FDBF500CDE1D3 /* NSGradient+PredefinedGradients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSGradient+PredefinedGradients.m"; sourceTree = "<group>"; };
-		42A97AAC186FDBF500CDE1D3 /* NSImage+ImageNamedForClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+ImageNamedForClass.h"; sourceTree = "<group>"; };
-		42A97AAD186FDBF500CDE1D3 /* NSImage+ImageNamedForClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+ImageNamedForClass.m"; sourceTree = "<group>"; };
-		42A97AAE186FDBF500CDE1D3 /* NSMutableArray+Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffling.h"; sourceTree = "<group>"; };
-		42A97AAF186FDBF500CDE1D3 /* NSMutableArray+Shuffling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffling.m"; sourceTree = "<group>"; };
-		42A97AB0186FDBF500CDE1D3 /* NSTableView+ColumnLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTableView+ColumnLayout.h"; sourceTree = "<group>"; };
-		42A97AB1186FDBF500CDE1D3 /* NSTableView+ColumnLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTableView+ColumnLayout.m"; sourceTree = "<group>"; };
-		42A97AB2186FDBF500CDE1D3 /* NSTabView+SwitchExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTabView+SwitchExtensions.h"; sourceTree = "<group>"; };
-		42A97AB3186FDBF500CDE1D3 /* NSTabView+SwitchExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTabView+SwitchExtensions.m"; sourceTree = "<group>"; };
-		42A97AB4186FDBF500CDE1D3 /* NSView+SubviewExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+SubviewExtensions.h"; sourceTree = "<group>"; };
-		42A97AB5186FDBF500CDE1D3 /* NSView+SubviewExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+SubviewExtensions.m"; sourceTree = "<group>"; };
-		42A97AB6186FDBF500CDE1D3 /* VerticalLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalLayoutView.h; sourceTree = "<group>"; };
-		42A97AB7186FDBF500CDE1D3 /* VerticalLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalLayoutView.m; sourceTree = "<group>"; };
-		42B200711870ACD700208D1A /* NSBundle+NewtonCommanderUIBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+NewtonCommanderUIBundle.h"; sourceTree = "<group>"; };
-		42B200721870ACD700208D1A /* NSBundle+NewtonCommanderUIBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+NewtonCommanderUIBundle.m"; sourceTree = "<group>"; };
 		42C1556B115615B7000A0547 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		42DF9212186FDCF900B26412 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DF9213186FDCF900B26412 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -188,7 +89,6 @@
 			children = (
 				4266691F1870E2AA00F16FB0 /* Assets */,
 				42A97AE9186FDC0800CDE1D3 /* Resources */,
-				422F201A11A84E730029C47A /* source */,
 				42DF9215186FDCF900B26412 /* Demo */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
@@ -240,117 +140,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		422F201A11A84E730029C47A /* source */ = {
-			isa = PBXGroup;
-			children = (
-				42A97A53186FDBF400CDE1D3 /* MAAttachedWindow.h */,
-				42A97A54186FDBF400CDE1D3 /* MAAttachedWindow.m */,
-				42A97A55186FDBF400CDE1D3 /* MBPreferencesController.h */,
-				42A97A56186FDBF400CDE1D3 /* MBPreferencesController.m */,
-				42A97A57186FDBF400CDE1D3 /* NCBackground.h */,
-				42A97A58186FDBF400CDE1D3 /* NCBackground.m */,
-				42A97A59186FDBF400CDE1D3 /* NCCommon.h */,
-				42A97A5A186FDBF400CDE1D3 /* NCCommon.m */,
-				42A97A5B186FDBF400CDE1D3 /* NCCommonTest.h */,
-				42A97A5C186FDBF400CDE1D3 /* NCCommonTest.m */,
-				42A97A5D186FDBF400CDE1D3 /* NCCopyOperationDummy.h */,
-				42A97A5E186FDBF400CDE1D3 /* NCCopyOperationDummy.m */,
-				42A97A5F186FDBF400CDE1D3 /* NCCopyOperationProtocol.h */,
-				42A97A60186FDBF400CDE1D3 /* NCCopySheet.h */,
-				42A97A61186FDBF400CDE1D3 /* NCCopySheet.m */,
-				42A97A62186FDBF400CDE1D3 /* NCDateCell.h */,
-				42A97A63186FDBF400CDE1D3 /* NCDateCell.m */,
-				42A97A64186FDBF400CDE1D3 /* NCDeleteSheet.h */,
-				42A97A65186FDBF400CDE1D3 /* NCDeleteSheet.m */,
-				42A97A66186FDBF400CDE1D3 /* NCGotoFolderController.h */,
-				42A97A67186FDBF400CDE1D3 /* NCGotoFolderController.m */,
-				42A97A68186FDBF400CDE1D3 /* NCHelpView.h */,
-				42A97A69186FDBF400CDE1D3 /* NCHelpView.m */,
-				42A97A6A186FDBF400CDE1D3 /* NCImageAndTextCell.h */,
-				42A97A6B186FDBF400CDE1D3 /* NCImageAndTextCell.m */,
-				42A97A6C186FDBF400CDE1D3 /* NCImageCache.h */,
-				42A97A6D186FDBF400CDE1D3 /* NCImageCache.m */,
-				42A97A6E186FDBF400CDE1D3 /* NCInfoView.h */,
-				42A97A6F186FDBF400CDE1D3 /* NCInfoView.m */,
-				42A97A70186FDBF400CDE1D3 /* NCLister.h */,
-				42A97A71186FDBF400CDE1D3 /* NCLister.m */,
-				42A97A72186FDBF400CDE1D3 /* NCListerBreadcrumb.h */,
-				42A97A73186FDBF400CDE1D3 /* NCListerBreadcrumb.m */,
-				42A97A74186FDBF400CDE1D3 /* NCListerCell.h */,
-				42A97A75186FDBF400CDE1D3 /* NCListerCell.m */,
-				42A97A76186FDBF500CDE1D3 /* NCListerCounter.h */,
-				42A97A77186FDBF500CDE1D3 /* NCListerCounter.m */,
-				42A97A78186FDBF500CDE1D3 /* NCListerDataSource.h */,
-				42A97A79186FDBF500CDE1D3 /* NCListerDataSourceAdvanced.h */,
-				42A97A7A186FDBF500CDE1D3 /* NCListerDataSourceAdvanced.m */,
-				42A97A7B186FDBF500CDE1D3 /* NCListerItem.h */,
-				42A97A7C186FDBF500CDE1D3 /* NCListerItem.m */,
-				42A97A7D186FDBF500CDE1D3 /* NCListerScroller.h */,
-				42A97A7E186FDBF500CDE1D3 /* NCListerScroller.m */,
-				42A97A7F186FDBF500CDE1D3 /* NCListerTableHeaderView.h */,
-				42A97A80186FDBF500CDE1D3 /* NCListerTableHeaderView.m */,
-				42A97A81186FDBF500CDE1D3 /* NCListerTableTextCell.h */,
-				42A97A82186FDBF500CDE1D3 /* NCListerTableTextCell.m */,
-				42A97A83186FDBF500CDE1D3 /* NCListerTableView.h */,
-				42A97A84186FDBF500CDE1D3 /* NCListerTableView.m */,
-				42A97A85186FDBF500CDE1D3 /* NCMakeDirController.h */,
-				42A97A86186FDBF500CDE1D3 /* NCMakeDirController.m */,
-				42A97A87186FDBF500CDE1D3 /* NCMakeFileController.h */,
-				42A97A88186FDBF500CDE1D3 /* NCMakeFileController.m */,
-				42A97A89186FDBF500CDE1D3 /* NCMakeLinkController.h */,
-				42A97A8A186FDBF500CDE1D3 /* NCMakeLinkController.m */,
-				42A97A8B186FDBF500CDE1D3 /* NCMoveOperationDummy.h */,
-				42A97A8C186FDBF500CDE1D3 /* NCMoveOperationDummy.m */,
-				42A97A8D186FDBF500CDE1D3 /* NCMoveOperationProtocol.h */,
-				42A97A8E186FDBF500CDE1D3 /* NCMoveSheet.h */,
-				42A97A8F186FDBF500CDE1D3 /* NCMoveSheet.m */,
-				42A97A90186FDBF500CDE1D3 /* NCPathControl.h */,
-				42A97A91186FDBF500CDE1D3 /* NCPathControl.m */,
-				42A97A92186FDBF500CDE1D3 /* NCPermissionCell.h */,
-				42A97A93186FDBF500CDE1D3 /* NCPermissionCell.m */,
-				42A97A94186FDBF500CDE1D3 /* NCPermissionSheet.h */,
-				42A97A95186FDBF500CDE1D3 /* NCPermissionSheet.m */,
-				42A97A96186FDBF500CDE1D3 /* NCPreferencesAdvancedController.h */,
-				42A97A97186FDBF500CDE1D3 /* NCPreferencesAdvancedController.m */,
-				42A97A98186FDBF500CDE1D3 /* NCPreferencesBookmarkController.h */,
-				42A97A99186FDBF500CDE1D3 /* NCPreferencesBookmarkController.m */,
-				42A97A9A186FDBF500CDE1D3 /* NCPreferencesGeneralController.h */,
-				42A97A9B186FDBF500CDE1D3 /* NCPreferencesGeneralController.m */,
-				42A97A9C186FDBF500CDE1D3 /* NCPreferencesMenuController.h */,
-				42A97A9D186FDBF500CDE1D3 /* NCPreferencesMenuController.m */,
-				42A97A9E186FDBF500CDE1D3 /* NCSplitView.h */,
-				42A97A9F186FDBF500CDE1D3 /* NCSplitView.m */,
-				42A97AA0186FDBF500CDE1D3 /* NCTableHeaderCell.h */,
-				42A97AA1186FDBF500CDE1D3 /* NCTableHeaderCell.m */,
-				42A97AA2186FDBF500CDE1D3 /* NCTableHeaderView.h */,
-				42A97AA3186FDBF500CDE1D3 /* NCTableHeaderView.m */,
-				42A97AA4186FDBF500CDE1D3 /* NCVolumeStatus.h */,
-				42A97AA5186FDBF500CDE1D3 /* NCVolumeStatus.m */,
-				42A97AA6186FDBF500CDE1D3 /* NSArray+PrependPath.h */,
-				42A97AA7186FDBF500CDE1D3 /* NSArray+PrependPath.m */,
-				42A97AA8186FDBF500CDE1D3 /* NSArray+PrependPathTest.h */,
-				42A97AA9186FDBF500CDE1D3 /* NSArray+PrependPathTest.m */,
-				42A97AAA186FDBF500CDE1D3 /* NSGradient+PredefinedGradients.h */,
-				42A97AAB186FDBF500CDE1D3 /* NSGradient+PredefinedGradients.m */,
-				42A97AAC186FDBF500CDE1D3 /* NSImage+ImageNamedForClass.h */,
-				42A97AAD186FDBF500CDE1D3 /* NSImage+ImageNamedForClass.m */,
-				42A97AAE186FDBF500CDE1D3 /* NSMutableArray+Shuffling.h */,
-				42A97AAF186FDBF500CDE1D3 /* NSMutableArray+Shuffling.m */,
-				42A97AB0186FDBF500CDE1D3 /* NSTableView+ColumnLayout.h */,
-				42A97AB1186FDBF500CDE1D3 /* NSTableView+ColumnLayout.m */,
-				42A97AB2186FDBF500CDE1D3 /* NSTabView+SwitchExtensions.h */,
-				42A97AB3186FDBF500CDE1D3 /* NSTabView+SwitchExtensions.m */,
-				42A97AB4186FDBF500CDE1D3 /* NSView+SubviewExtensions.h */,
-				42A97AB5186FDBF500CDE1D3 /* NSView+SubviewExtensions.m */,
-				42A97AB6186FDBF500CDE1D3 /* VerticalLayoutView.h */,
-				42A97AB7186FDBF500CDE1D3 /* VerticalLayoutView.m */,
-				42B200711870ACD700208D1A /* NSBundle+NewtonCommanderUIBundle.h */,
-				42B200721870ACD700208D1A /* NSBundle+NewtonCommanderUIBundle.m */,
-			);
-			name = source;
-			path = ../Classes/osx;
-			sourceTree = "<group>";
-		};
 		4266691F1870E2AA00F16FB0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +183,10 @@
 		42DF9215186FDCF900B26412 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4282E83B1876C41300A98954 /* NCCommonTest.h */,
+				4282E83C1876C41300A98954 /* NCCommonTest.m */,
+				4282E83D1876C41300A98954 /* NSArray+PrependPathTest.h */,
+				4282E83E1876C41300A98954 /* NSArray+PrependPathTest.m */,
 				42DF9221186FDCF900B26412 /* AppDelegate.h */,
 				42DF9222186FDCF900B26412 /* AppDelegate.m */,
 				42DF9224186FDCF900B26412 /* MainMenu.xib */,
