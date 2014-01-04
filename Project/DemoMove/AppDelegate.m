@@ -5,12 +5,14 @@
 
 #import "AppDelegate.h"
 #import "NCMoveSheet.h"
+#import "NCListerDataSourceAdvanced.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	id <NCMoveOperationProtocol> moveOperation = nil;
+	NCListerDataSourceAdvanced *dsa = [NCListerDataSourceAdvanced new];
+	id <NCMoveOperationProtocol> moveOperation = [dsa moveOperation];
 	
 	NSArray *names = @[@"move1.txt"];
 	

@@ -5,12 +5,14 @@
 
 #import "AppDelegate.h"
 #import "NCCopySheet.h"
+#import "NCListerDataSourceAdvanced.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	id <NCCopyOperationProtocol> copyOperation = nil;
+	NCListerDataSourceAdvanced *dsa = [NCListerDataSourceAdvanced new];
+	id <NCCopyOperationProtocol> copyOperation = [dsa copyOperation];
 	
 	NSArray *names = @[@"copy1.txt"];
 	
