@@ -26,17 +26,10 @@
 	[sheet setNames:names];
 	[sheet setCopyOperation:copyOperation];
 	[sheet setDelegate:self];
-	[sheet beginSheetForWindow:[self window]];
-}
-
--(void)copySheetDidClose:(NCCopySheet*)sheet {
-	NSLog(@"copy sheet did close");
-	exit(EXIT_SUCCESS);
-}
-
--(void)copySheetDidFinish:(NCCopySheet*)sheet {
-	NSLog(@"copy sheet did finish");
-	exit(EXIT_SUCCESS);
+	[sheet beginSheetForWindow:[self window] completionHandler:^{
+		NSLog(@"completionHandler");
+		exit(EXIT_SUCCESS);
+	}];
 }
 
 @end

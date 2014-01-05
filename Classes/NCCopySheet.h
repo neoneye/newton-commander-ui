@@ -92,6 +92,10 @@
 +(NCCopySheet*)shared;
 
 -(void)beginSheetForWindow:(NSWindow*)parentWindow;
+
+-(void)beginSheetForWindow:(NSWindow*)parentWindow
+		 completionHandler:(void (^)())handler;
+
 -(IBAction)cancelAction:(id)sender;
 -(IBAction)submitAction:(id)sender;
 

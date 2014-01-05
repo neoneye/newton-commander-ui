@@ -26,7 +26,10 @@
 	[sheet setNames:names];
 	[sheet setMoveOperation:moveOperation];
 	[sheet setDelegate:self];
-	[sheet beginSheetForWindow:[self window]];
+	[sheet beginSheetForWindow:[self window] completionHandler:^{
+		NSLog(@"completionHandler");
+		exit(EXIT_SUCCESS);
+	}];
 	
 }
 

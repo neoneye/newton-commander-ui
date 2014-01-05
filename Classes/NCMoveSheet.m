@@ -140,6 +140,13 @@
 }
 
 -(void)beginSheetForWindow:(NSWindow*)parentWindow {
+	[self beginSheetForWindow:parentWindow completionHandler:NULL];
+}
+
+-(void)beginSheetForWindow:(NSWindow*)parentWindow
+		 completionHandler:(void (^)())handler
+{
+
 	/*
 	Wait until we are 100% sure that the nib has been fully loaded
 	ensure that the window is loaded before we start operating
@@ -179,13 +186,11 @@
 	
 	[m_progress_view setHidden:YES];
 	[m_confirm_view setHidden:NO];
-    [NSApp 
-		beginSheet: window
-        modalForWindow: parentWindow
-		modalDelegate: self
-		didEndSelector: nil //@selector(didEndSheet:returnCode:contextInfo:)
-		contextInfo: nil
-	];
+	[parentWindow beginSheet:window completionHandler:^(NSModalResponse returnCode) {
+		if (handler) {
+			handler();
+		}
+	}];
 	
 	// LOG_DEBUG(@"%s move from: %@", _cmd, m_source_paths);
 	// LOG_DEBUG(@"%s move to dir: %@", _cmd, m_target_path);
@@ -201,11 +206,12 @@
 #pragma mark Close sheet when we are done
 
 -(void)closeSheet {
-	// NSAssert(m_move_operation, @"moveOperation should not be nil at this point");
-	// [m_move_operation setMoveOperationDelegate:nil];
+	NSAssert(m_move_operation, @"moveOperation should not be nil at this point");
+	[m_move_operation setMoveOperationDelegate:nil];
 
-	[[self window] close];
-	[NSApp endSheet:[self window] returnCode:0];
+	NSWindow *sheet = self.window;
+	NSWindow *sheetParent = sheet.sheetParent;
+	[sheetParent endSheet:sheet];
 }
 
 #pragma mark -

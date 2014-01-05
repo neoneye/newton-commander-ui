@@ -169,6 +169,12 @@
 #pragma mark Open the sheet and start counting items
 
 -(void)beginSheetForWindow:(NSWindow*)parentWindow {
+	[self beginSheetForWindow:parentWindow completionHandler:NULL];
+}
+
+-(void)beginSheetForWindow:(NSWindow*)parentWindow
+		 completionHandler:(void (^)())handler
+{
 	/*
 	Wait until we are 100% sure that the nib has been fully loaded
 	ensure that the window is loaded before we start operating
@@ -209,13 +215,11 @@
 	
 	[m_progress_view setHidden:YES];
 	[m_confirm_view setHidden:NO];
-    [NSApp 
-		beginSheet: window
-        modalForWindow: parentWindow
-		modalDelegate: self
-		didEndSelector: nil //@selector(didEndSheet:returnCode:contextInfo:)
-		contextInfo: nil
-	];
+	[parentWindow beginSheet:window completionHandler:^(NSModalResponse returnCode) {
+		if (handler) {
+			handler();
+		}
+	}];
 	
 	// LOG_DEBUG(@"%s copy from: %@", _cmd, m_source_paths);
 	// LOG_DEBUG(@"%s copy to dir: %@", _cmd, m_target_path);
@@ -233,8 +237,9 @@
 	NSAssert(m_copy_operation, @"systemTransfer should not be nil at this point");
 	[m_copy_operation setCopyOperationDelegate:nil];
 
-	[[self window] close];
-	[NSApp endSheet:[self window] returnCode:0];
+	NSWindow *sheet = self.window;
+	NSWindow *sheetParent = sheet.sheetParent;
+	[sheetParent endSheet:sheet];
 }
 
 #pragma mark -
