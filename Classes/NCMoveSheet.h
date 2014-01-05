@@ -7,25 +7,9 @@
 #import "NCMoveOperationProtocol.h"
 
 
-@interface NCMoveSheetItem : NSObject {
-	NSString* name;
-	NSString* message;
-	unsigned long long bytes; // filesize in bytes
-	unsigned long long count; // number of items
-}
-@property (copy) NSString* name;
-@property (copy) NSString* message;
-@property (assign) unsigned long long bytes;
-@property (assign) unsigned long long count;
-
-+(NSArray*)itemsFromNames:(NSArray*)ary;
-@end
-
-
 @class NCPathControl;
 
-@interface NCMoveSheet : NSWindowController <NCMoveOperationDelegate> {
-	id __unsafe_unretained m_delegate;
+@interface NCMoveSheet : NSWindowController {
 	NSView* __weak m_confirm_view;
 	NSView* __weak m_progress_view;
 
@@ -49,10 +33,7 @@
 	NCPathControl* __weak m_progress_target_path;
 
 	NSArrayController* __weak m_progress_items;
-	
-	id <NCMoveOperationProtocol> m_move_operation;
 }
-@property (unsafe_unretained) id delegate;
 @property (weak) IBOutlet NSView* confirmView;
 @property (weak) IBOutlet NSView* progressView;
 @property (weak) IBOutlet NSTextField* confirmSummary;
@@ -70,13 +51,14 @@
 @property (copy) NSArray* names;
 @property (copy) NSString* sourceDir;
 @property (copy) NSString* targetDir;
-@property (strong) id <NCMoveOperationProtocol> moveOperation;
-+(NCMoveSheet*)shared;
 
--(void)beginSheetForWindow:(NSWindow*)parentWindow;
-
--(void)beginSheetForWindow:(NSWindow*)parentWindow
++(void)beginSheetForWindow:(NSWindow*)parentWindow
+				 operation:(id <NCMoveOperationProtocol>)operation
+				 sourceDir:(NSString*)sourceDir
+				 targetDir:(NSString*)targetDir
+					 names:(NSArray*)names
 		 completionHandler:(void (^)())handler;
+
 
 -(IBAction)cancelAction:(id)sender;
 -(IBAction)submitAction:(id)sender;

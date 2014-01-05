@@ -18,6 +18,23 @@
 // #import <QuartzCore/QuartzCore.h>
 
 
+
+
+@interface NCCopySheetItem : NSObject {
+	NSString* name;
+	NSString* message;
+	unsigned long long bytes; // filesize in bytes
+	unsigned long long count; // number of items
+}
+@property (copy) NSString* name;
+@property (copy) NSString* message;
+@property (assign) unsigned long long bytes;
+@property (assign) unsigned long long count;
+
++(NSArray*)itemsFromNames:(NSArray*)ary;
+@end
+
+
 @implementation NCCopySheetItem
 @synthesize name, message, bytes, count;
 
@@ -46,7 +63,11 @@
 @end
 
 
-@interface NCCopySheet (Private)
+@interface NCCopySheet () <NCCopyOperationDelegate>
+
+@property (strong) id <NCCopyOperationProtocol> operation;
+
+
 // -(CATransition*)animation;
 // -(CAAnimation *)pushAnimation;
 -(BOOL)closeWhenFinished;
@@ -61,7 +82,6 @@
 @end
 
 @implementation NCCopySheet
-@synthesize delegate = m_delegate;
 @synthesize confirmView = m_confirm_view;
 @synthesize progressView = m_progress_view;
 @synthesize confirmSummary = m_confirm_summary;
@@ -75,7 +95,6 @@
 @synthesize sourceDir = m_source_dir;
 @synthesize targetDir = m_target_dir;
 @synthesize progressItems = m_progress_items;
-@synthesize copyOperation = m_copy_operation;
 @synthesize confirmSourcePath = m_confirm_source_path;
 @synthesize confirmTargetPath = m_confirm_target_path;
 @synthesize progressSourcePath = m_progress_source_path;
@@ -84,12 +103,19 @@
 #pragma mark -
 #pragma mark Setup code
 
-+(NCCopySheet*)shared {
-    static NCCopySheet* shared = nil;
-    if(!shared) {
-        shared = [[NCCopySheet allocWithZone:NULL] init];
-    }
-    return shared;
++(void)beginSheetForWindow:(NSWindow*)parentWindow
+				 operation:(id <NCCopyOperationProtocol>)operation
+				 sourceDir:(NSString*)sourceDir
+				 targetDir:(NSString*)targetDir
+					 names:(NSArray*)names
+		 completionHandler:(void (^)())handler
+{
+	NCCopySheet* sheet = [NCCopySheet new];
+	sheet.sourceDir = sourceDir;
+	sheet.targetDir = targetDir;
+	sheet.names = names;
+	sheet.operation = operation;
+	[sheet beginSheetForWindow:parentWindow completionHandler:handler];
 }
 
 - (id)init {
@@ -168,10 +194,6 @@
 #pragma mark -
 #pragma mark Open the sheet and start counting items
 
--(void)beginSheetForWindow:(NSWindow*)parentWindow {
-	[self beginSheetForWindow:parentWindow completionHandler:NULL];
-}
-
 -(void)beginSheetForWindow:(NSWindow*)parentWindow
 		 completionHandler:(void (^)())handler
 {
@@ -189,11 +211,11 @@
 	
 	[self updateCheckboxes];
 	
-	if(!m_copy_operation) {
-		[self setCopyOperation:[[NCCopyOperationDummy alloc] init]];
+	if(!_operation) {
+		_operation = [NCCopyOperationDummy new];
 	}
-	NSAssert(m_copy_operation, @"systemTransfer should not be nil at this point");
-	[m_copy_operation setCopyOperationDelegate:self];
+	NSAssert(_operation, @"systemTransfer should not be nil at this point");
+	[_operation setCopyOperationDelegate:self];
 
 	NSArray* names = [self names];
 	NSString* src = [self sourceDir];
@@ -224,18 +246,18 @@
 	// LOG_DEBUG(@"%s copy from: %@", _cmd, m_source_paths);
 	// LOG_DEBUG(@"%s copy to dir: %@", _cmd, m_target_path);
 
-	[m_copy_operation setCopyOperationNames:names];
-  	[m_copy_operation setCopyOperationSourceDir:src];
-	[m_copy_operation setCopyOperationTargetDir:dst]; 
-	[m_copy_operation prepareCopyOperation];
+	[_operation setCopyOperationNames:names];
+  	[_operation setCopyOperationSourceDir:src];
+	[_operation setCopyOperationTargetDir:dst]; 
+	[_operation prepareCopyOperation];
 }
 
 #pragma mark -
 #pragma mark Close sheet when we are done
 
 -(void)closeSheet {
-	NSAssert(m_copy_operation, @"systemTransfer should not be nil at this point");
-	[m_copy_operation setCopyOperationDelegate:nil];
+	NSAssert(_operation, @"systemTransfer should not be nil at this point");
+	[_operation setCopyOperationDelegate:nil];
 
 	NSWindow *sheet = self.window;
 	NSWindow *sheetParent = sheet.sheetParent;
@@ -248,13 +270,9 @@
 -(IBAction)cancelAction:(id)sender {
 	LOG_DEBUG(@"will abort");
 	
-	[m_copy_operation abortCopyOperation];
+	[_operation abortCopyOperation];
 
 	[self closeSheet];
-
-	if([m_delegate respondsToSelector:@selector(copySheetDidClose:)]) {
-		[m_delegate copySheetDidClose:self];
-	}
 }
 
 #pragma mark -
@@ -365,7 +383,7 @@
 }
 
 -(void)executeOperation {
-	[m_copy_operation executeCopyOperation];
+	[_operation executeCopyOperation];
 }
 
 #pragma mark -
@@ -521,9 +539,7 @@
 		}
 	}
 
-	if([m_delegate respondsToSelector:@selector(copySheetDidFinish:)]) {
-		[m_delegate copySheetDidFinish:self];
-	}
+	// Copy did finish successfully
 }
 
 -(void)transferAlertResponse:(NSDictionary*)dict {

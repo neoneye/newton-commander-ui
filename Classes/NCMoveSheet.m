@@ -16,6 +16,20 @@
 #import "NSBundle+NewtonCommanderUIBundle.h"
 
 
+@interface NCMoveSheetItem : NSObject {
+	NSString* name;
+	NSString* message;
+	unsigned long long bytes; // filesize in bytes
+	unsigned long long count; // number of items
+}
+@property (copy) NSString* name;
+@property (copy) NSString* message;
+@property (assign) unsigned long long bytes;
+@property (assign) unsigned long long count;
+
++(NSArray*)itemsFromNames:(NSArray*)ary;
+@end
+
 @implementation NCMoveSheetItem
 @synthesize name, message, bytes, count;
 
@@ -45,7 +59,9 @@
 
 
 
-@interface NCMoveSheet (Private)
+@interface NCMoveSheet () <NCMoveOperationDelegate>
+
+@property (strong) id <NCMoveOperationProtocol> operation;
 
 -(void)scanProgressResponse:(NSDictionary*)dict;
 -(void)scanCompleteResponse:(NSDictionary*)dict;
@@ -57,7 +73,6 @@
 @end
 
 @implementation NCMoveSheet
-@synthesize delegate = m_delegate;
 @synthesize confirmView = m_confirm_view;
 @synthesize progressView = m_progress_view;
 @synthesize confirmSummary = m_confirm_summary;
@@ -71,7 +86,6 @@
 @synthesize sourceDir = m_source_dir;
 @synthesize targetDir = m_target_dir;
 @synthesize progressItems = m_progress_items;
-@synthesize moveOperation = m_move_operation;
 @synthesize confirmSourcePath = m_confirm_source_path;
 @synthesize confirmTargetPath = m_confirm_target_path;
 @synthesize progressSourcePath = m_progress_source_path;
@@ -80,13 +94,21 @@
 #pragma mark -
 #pragma mark Setup code
 
-+(NCMoveSheet*)shared {
-    static NCMoveSheet* shared = nil;
-    if(!shared) {
-        shared = [[NCMoveSheet allocWithZone:NULL] init];
-    }
-    return shared;
++(void)beginSheetForWindow:(NSWindow*)parentWindow
+				 operation:(id <NCMoveOperationProtocol>)operation
+				 sourceDir:(NSString*)sourceDir
+				 targetDir:(NSString*)targetDir
+					 names:(NSArray*)names
+		 completionHandler:(void (^)())handler
+{
+	NCMoveSheet* sheet = [NCMoveSheet new];
+	sheet.sourceDir = sourceDir;
+	sheet.targetDir = targetDir;
+	sheet.names = names;
+	sheet.operation = operation;
+	[sheet beginSheetForWindow:parentWindow completionHandler:handler];
 }
+
 
 - (id)init {
 	NSBundle *bundle = [NSBundle newtonCommanderUIBundle];
@@ -161,11 +183,11 @@
 	
 	// [self updateCheckboxes];
 	
-	if(!m_move_operation) {
-		[self setMoveOperation:[[NCMoveOperationDummy alloc] init]];
+	if(!_operation) {
+		_operation = [NCMoveOperationDummy new];
 	}
-	NSAssert(m_move_operation, @"moveOperation should not be nil at this point");
-	[m_move_operation setMoveOperationDelegate:self];
+	NSAssert(_operation, @"moveOperation should not be nil at this point");
+	[_operation setMoveOperationDelegate:self];
 
 	NSArray* names = [self names];
 	NSString* src = [self sourceDir];
@@ -195,10 +217,10 @@
 	// LOG_DEBUG(@"%s move from: %@", _cmd, m_source_paths);
 	// LOG_DEBUG(@"%s move to dir: %@", _cmd, m_target_path);
 
-	[m_move_operation setMoveOperationNames:names];
-  	[m_move_operation setMoveOperationSourceDir:src];
-	[m_move_operation setMoveOperationTargetDir:dst]; 
-	[m_move_operation prepareMoveOperation];
+	[_operation setMoveOperationNames:names];
+  	[_operation setMoveOperationSourceDir:src];
+	[_operation setMoveOperationTargetDir:dst]; 
+	[_operation prepareMoveOperation];
 }
 
 
@@ -206,8 +228,8 @@
 #pragma mark Close sheet when we are done
 
 -(void)closeSheet {
-	NSAssert(m_move_operation, @"moveOperation should not be nil at this point");
-	[m_move_operation setMoveOperationDelegate:nil];
+	NSAssert(_operation, @"moveOperation should not be nil at this point");
+	[_operation setMoveOperationDelegate:nil];
 
 	NSWindow *sheet = self.window;
 	NSWindow *sheetParent = sheet.sheetParent;
@@ -221,10 +243,6 @@
 	// LOG_DEBUG(@"%s", _cmd);
 
 	[self closeSheet];
-
-/*	if([m_delegate respondsToSelector:@selector(transferSheetDidClose:)]) {
-		[m_delegate transferSheetDidClose:self];
-	}*/
 }
 
 -(IBAction)submitAction:(id)sender {
@@ -269,7 +287,7 @@
 }
 
 -(void)executeOperation {
-	[m_move_operation executeMoveOperation];
+	[_operation executeMoveOperation];
 }
 
 -(void)moveOperation:(id<NCMoveOperationProtocol>)move_operation response:(NSDictionary*)dict {
@@ -420,9 +438,7 @@
 		}
 	}
 
-	if([m_delegate respondsToSelector:@selector(copySheetDidFinish:)]) {
-		[m_delegate performSelector:@selector(copySheetDidFinish:) withObject:self];
-	}
+	// Move did finish successfully
 }
 
 -(void)transferCompleteResponse:(NSDictionary*)dict {
