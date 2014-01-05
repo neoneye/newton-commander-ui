@@ -197,10 +197,6 @@
 	[m_progress_target_path deactivate];
 }
 
--(void)beginSheetForWindow:(NSWindow*)parentWindow {
-	[self beginSheetForWindow:parentWindow completionHandler:NULL];
-}
-
 -(void)beginSheetForWindow:(NSWindow*)parentWindow
 		 completionHandler:(void (^)())handler
 {
