@@ -6,63 +6,23 @@
 #import <Cocoa/Cocoa.h>
 #import "NCCopyOperationProtocol.h"
 
+@interface NCCopySheet : NSWindowController
 
-@class NCPathControl;
-
-@interface NCCopySheet : NSWindowController {
-	NSView* __weak m_confirm_view;
-	NSView* __weak m_progress_view;
-
-	NSArray* m_names;
-	NSString* m_source_dir;
-	NSString* m_target_dir;
-
-	// confirm sheet
-	NSTextField* __weak m_confirm_summary;
-	NSButton* __weak m_confirm_button;
-	NSButton* __weak m_confirm_close_when_finished_button;
-	NCPathControl* __weak m_confirm_source_path;
-	NCPathControl* __weak m_confirm_target_path;
-
-	// progress sheet
-	NSTextField* __weak m_progress_summary;
-	NSProgressIndicator* __weak m_progress_indicator;
-	NSButton* __weak m_abort_button;
-	NSButton* __weak m_progress_close_when_finished_button;
-	NCPathControl* __weak m_progress_source_path;
-	NCPathControl* __weak m_progress_target_path;
-
-	NSArrayController* __weak m_progress_items;
-}
-@property (weak) IBOutlet NSView* confirmView;
-@property (weak) IBOutlet NSView* progressView;
-@property (weak) IBOutlet NSTextField* confirmSummary;
-@property (weak) IBOutlet NSButton* confirmButton;
-@property (weak) IBOutlet NSButton* abortButton;
-@property (weak) IBOutlet NSButton* confirmCloseWhenFinishedButton;
-@property (weak) IBOutlet NSButton* progressCloseWhenFinishedButton;
-@property (weak) IBOutlet NSTextField* progressSummary;
-@property (weak) IBOutlet NSProgressIndicator* progressIndicator;
-@property (weak) IBOutlet NSArrayController* progressItems;
-@property (weak) IBOutlet NCPathControl* confirmSourcePath;
-@property (weak) IBOutlet NCPathControl* confirmTargetPath;
-@property (weak) IBOutlet NCPathControl* progressSourcePath;
-@property (weak) IBOutlet NCPathControl* progressTargetPath;
-@property (copy) NSArray* names;
-@property (copy) NSString* sourceDir;
-@property (copy) NSString* targetDir;
-
+/**
+ Opens the "copy files" modal sheet
+ 
+ @param parentWindow        The window to which the sheet should attach itself.
+ @param operation           The worker that should carry out the actual copy operaion.
+ @param sourceDir           The folder where the names should be copied from.
+ @param targetDir           The folder where the names should be copied into.
+ @param names               Array of NSStrings with file/folder names to be copied.
+ @param completionHandler   The completion handler that gets called when the sheet's modal session ends.
+ */
 +(void)beginSheetForWindow:(NSWindow*)parentWindow
 				 operation:(id <NCCopyOperationProtocol>)operation
 				 sourceDir:(NSString*)sourceDir
 				 targetDir:(NSString*)targetDir
 					 names:(NSArray*)names
 		 completionHandler:(void (^)())handler;
-
-
--(IBAction)cancelAction:(id)sender;
--(IBAction)submitAction:(id)sender;
-
--(IBAction)closeWindowWhenFinishedAction:(id)sender;
 
 @end
