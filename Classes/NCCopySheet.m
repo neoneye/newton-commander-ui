@@ -111,21 +111,8 @@
 
 -(IBAction)cancelAction:(id)sender;
 -(IBAction)submitAction:(id)sender;
-
 -(IBAction)closeWindowWhenFinishedAction:(id)sender;
 
-
-// -(CATransition*)animation;
-// -(CAAnimation *)pushAnimation;
--(BOOL)closeWhenFinished;
--(void)updateCheckboxes;
--(void)closeSheet;
--(void)scanProgressResponse:(NSDictionary*)dict;
--(void)scanCompleteResponse:(NSDictionary*)dict;
--(void)transferProgressItemResponse:(NSDictionary*)dict;
--(void)transferProgressResponse:(NSDictionary*)dict;
--(void)transferAlertResponse:(NSDictionary*)dict;
--(void)transferCompleteResponse:(NSDictionary*)dict;
 @end
 
 @implementation NCCopySheet

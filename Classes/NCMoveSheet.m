@@ -106,15 +106,6 @@
 -(IBAction)cancelAction:(id)sender;
 -(IBAction)submitAction:(id)sender;
 
-
-
--(void)scanProgressResponse:(NSDictionary*)dict;
--(void)scanCompleteResponse:(NSDictionary*)dict;
-
--(void)transferProgressResponse:(NSDictionary*)dict;
--(void)transferProgressItemResponse:(NSDictionary*)dict;
--(void)transferCompleteResponse:(NSDictionary*)dict;
-
 @end
 
 @implementation NCMoveSheet
