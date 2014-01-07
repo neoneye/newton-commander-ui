@@ -105,6 +105,7 @@
 
 -(IBAction)cancelAction:(id)sender;
 -(IBAction)submitAction:(id)sender;
+-(IBAction)closeWindowWhenFinishedAction:(id)sender;
 
 @end
 
@@ -197,6 +198,29 @@
 	[m_progress_target_path deactivate];
 }
 
+#pragma mark - Close window when the operation has finished
+
+#define NCMoveSheetCloseWhenFinishedUserDefaults @"close_move_sheet_when_finished"
+
+-(IBAction)closeWindowWhenFinishedAction:(id)sender {
+	BOOL close_when_finished = ([sender state] == NSOnState);
+	[[NSUserDefaults standardUserDefaults] setBool:close_when_finished forKey:NCMoveSheetCloseWhenFinishedUserDefaults];
+	[self updateCheckboxes];
+}
+
+-(BOOL)closeWhenFinished {
+	return [[NSUserDefaults standardUserDefaults] boolForKey:NCMoveSheetCloseWhenFinishedUserDefaults];
+}
+
+-(void)updateCheckboxes {
+	BOOL close_when_finished = [self closeWhenFinished];
+	int state = close_when_finished ? NSOnState : NSOffState;
+	[m_confirm_close_when_finished_button setState:state];
+	[m_progress_close_when_finished_button setState:state];
+}
+
+#pragma mark - Open the sheet and start counting items
+
 -(void)beginSheetForWindow:(NSWindow*)parentWindow
 		 completionHandler:(void (^)())handler
 {
@@ -213,7 +237,7 @@
 	NSWindow* window = [self window];
 	NSAssert(window, @"loadWindow is supposed to init the window");
 	
-	// [self updateCheckboxes];
+	[self updateCheckboxes];
 	
 	if(!_operation) {
 		_operation = [NCMoveOperationDummy new];
@@ -504,12 +528,11 @@
 	[m_abort_button setTitle:@"OK"];
 	[m_abort_button setKeyEquivalent:@"\r"];
 	[m_progress_indicator setDoubleValue:101];
+
 	
-	
-/*	TODO: close when finished in the move sheet
 	if([self closeWhenFinished]) {
 		[self performSelector:@selector(closeSheet) withObject:nil afterDelay:0.3];
-	}*/
+	}
 }
 
 @end

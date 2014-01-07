@@ -205,17 +205,18 @@
 	[m_progress_target_path deactivate];
 }
 
-#pragma mark -
-#pragma mark Close window when the operation has finished
+#pragma mark - Close window when the operation has finished
+
+#define NCCopySheetCloseWhenFinishedUserDefaults @"close_copy_sheet_when_finished"
 
 -(IBAction)closeWindowWhenFinishedAction:(id)sender {
 	BOOL close_when_finished = ([sender state] == NSOnState);
-	[[NSUserDefaults standardUserDefaults] setBool:close_when_finished forKey:@"close_transfersheet_when_finished"];
+	[[NSUserDefaults standardUserDefaults] setBool:close_when_finished forKey:NCCopySheetCloseWhenFinishedUserDefaults];
 	[self updateCheckboxes];
 }
 
 -(BOOL)closeWhenFinished {
-	return [[NSUserDefaults standardUserDefaults] boolForKey:@"close_transfersheet_when_finished"];
+	return [[NSUserDefaults standardUserDefaults] boolForKey:NCCopySheetCloseWhenFinishedUserDefaults];
 }
 
 -(void)updateCheckboxes {
@@ -225,8 +226,7 @@
 	[m_progress_close_when_finished_button setState:state];
 }
 
-#pragma mark -
-#pragma mark Open the sheet and start counting items
+#pragma mark - Open the sheet and start counting items
 
 -(void)beginSheetForWindow:(NSWindow*)parentWindow
 		 completionHandler:(void (^)())handler
