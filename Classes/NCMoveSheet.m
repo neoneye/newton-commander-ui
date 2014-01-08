@@ -365,7 +365,10 @@
 	if([response_type isEqual:@"transfer-progress-item"]) { 
 		[self transferProgressItemResponse:response_object];
 	} else
-	if([response_type isEqual:@"transfer-complete"]) { 
+	if([response_type isEqual:@"transfer-alert"]) {
+		[self transferAlertResponse:response_object];
+	} else
+	if([response_type isEqual:@"transfer-complete"]) {
 		[self transferCompleteResponse:response_object];
 	} else {
 		LOG_DEBUG(@"unknown response: %@", dict);
@@ -495,6 +498,35 @@
 	}
 
 	// Move did finish successfully
+}
+
+-(void)transferAlertResponse:(NSDictionary*)dict {
+    NSString* message = [dict objectForKey:@"message"];
+//	NSUInteger code = [[dict objectForKey:@"code"] unsignedIntValue];
+	
+	NSString* message_text = @"Move Error";
+//	if(code == 1) {
+//		message_text = @"Target item already exists";
+//	}
+	
+	NSAlert *alert = [[NSAlert alloc] init];
+	[alert addButtonWithTitle:@"OK"];
+	// [alert addButtonWithTitle:@"Cancel"];
+	[alert setMessageText:message_text];
+	[alert setInformativeText:message];
+	[alert setAlertStyle:NSWarningAlertStyle];
+	[alert beginSheetModalForWindow:nil
+					  modalDelegate:self
+					 didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
+						contextInfo:nil];
+}
+
+-(void)alertDidEnd:(NSAlert*)alert
+        returnCode:(NSInteger)rc
+       contextInfo:(void*)ctx
+{
+	LOG_DEBUG(@"called");
+	[self performSelector:@selector(closeSheet) withObject:nil afterDelay:0.3];
 }
 
 -(void)transferCompleteResponse:(NSDictionary*)dict {
