@@ -10,6 +10,7 @@
 #import "NCLog.h"
 #import "NCInfoView.h"
 #import "NSBundle+NewtonCommanderUIBundle.h"
+#import "NCInspectFile.h"
 
 @implementation NCInfoObject
 
@@ -30,9 +31,17 @@
 @end
 
 
-@interface NCInfoView (Private)
--(void)setupStuff;
--(void)testBinding:(id)sender;
+@interface NCInfoView () {
+	NSMutableArray*	bindingNames;
+	NSMutableArray*	bindingObservedObjects;
+	NSMutableArray*	bindingObservedKeyPaths;
+	
+	NSString*	filename;
+	float		angle;
+	
+	NCInfoObject* m_info;
+	NSObjectController* m_controller;
+}
 @end
 
 @implementation NCInfoView
@@ -40,6 +49,40 @@
 @synthesize filename, angle;
 
 -(void)setupStuff {
+	
+	// Setting up the scroll view
+	NSScrollView *scrollview = [[NSScrollView alloc] initWithFrame:[self bounds]];
+	NSSize contentSize = [scrollview contentSize];
+	[scrollview setBorderType:NSNoBorder];
+	[scrollview setHasVerticalScroller:YES];
+	[scrollview setHasHorizontalScroller:NO];
+	[scrollview setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+	
+	// Setting up the text view
+	NSTextView *theTextView = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, contentSize.width, contentSize.height)];
+	[theTextView setMinSize:NSMakeSize(0.0, contentSize.height)];
+	[theTextView setMaxSize:NSMakeSize(FLT_MAX, FLT_MAX)];
+	[theTextView setVerticallyResizable:YES];
+	[theTextView setHorizontallyResizable:NO];
+	[theTextView setAutoresizingMask:NSViewWidthSizable];
+	[[theTextView textContainer] setContainerSize:NSMakeSize(contentSize.width, FLT_MAX)];
+	[[theTextView textContainer] setWidthTracksTextView:YES];
+	
+	// Assembling the pieces
+	[scrollview setDocumentView:theTextView];
+	
+	
+	[self addSubview:scrollview];
+	NSTextView *tv = theTextView;
+	
+	
+	NCInspectFile *pp = [[NCInspectFile alloc] initWithPath:[@"~/Desktop" stringByExpandingTildeInPath]];
+	[pp obtain];
+	NSAttributedString *s = [pp result];
+	[tv setEditable:YES];
+	[tv insertText:s];
+	[tv setEditable:NO];
+
 
 	m_info = [[NCInfoObject alloc] init];
 	m_controller = [[NSObjectController alloc] initWithContent:m_info];
@@ -76,8 +119,8 @@
 	LOG_DEBUG(@"%s : html file was found", object_getClassName(self));
 	
 	// We'll be our own frame load delegate and receive didFinishLoadForFrame
-	[self setFrameLoadDelegate:self];
-	[[self mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
+//	[self setFrameLoadDelegate:self];
+//	[[self mainFrame] loadRequest:[NSURLRequest requestWithURL:url]];
 	
 	// Binding storage
 	// in Ruby this would be a hash[bindingName] = { object => ..., keyPath => ... }
@@ -149,7 +192,7 @@
 	id newValue					= [observedObject valueForKeyPath:keyPath];
 //	LOG_DEBUG(@"New value %@ %s  %@", keyPath, object_getClassName(object), bindingName);
 	[self setValue:newValue forKey:bindingName];
-	[[self windowScriptObject] callWebScriptMethod:@"WebViewControl_valueChanged" withArguments:[NSArray arrayWithObjects: bindingName, nil]];
+//	[[self windowScriptObject] callWebScriptMethod:@"WebViewControl_valueChanged" withArguments:[NSArray arrayWithObjects: bindingName, nil]];
 }
 
 

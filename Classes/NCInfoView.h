@@ -20,17 +20,7 @@
 @end
 
 
-@interface NCInfoView : WebView {
-	NSMutableArray*	bindingNames;
-	NSMutableArray*	bindingObservedObjects;
-	NSMutableArray*	bindingObservedKeyPaths;
-
-	NSString*	filename;
-	float		angle;
-	
-	NCInfoObject* m_info;
-	NSObjectController* m_controller;
-}
+@interface NCInfoView : NSView 
 
 @property (copy) NSString* filename;
 @property	float angle;
