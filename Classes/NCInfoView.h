@@ -4,25 +4,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Webkit/Webkit.h>
 
-@interface NCInfoObject : NSObject {
+@interface NCInfoView : NSView
 
-	NSString*	name;
-	NSString*	orientation;
-	float		x, y;
-}
+-(void)analyzePath:(NSString*)path;
 
-@property (copy) NSString* name;
-@property (copy) NSString* orientation;
-@property float x, y;
-
-@end
-
-
-@interface NCInfoView : NSView 
-
-@property (copy) NSString* filename;
-@property	float angle;
+-(void)demo;
 
 @end
