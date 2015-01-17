@@ -191,54 +191,6 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 	return waittime;
 }
 
--(void)repeatinglyMoveUpWithEvent:(NSEvent*)event {
-	NSEvent* xevent = event;
-	for(NSInteger count=0; ; ++count) {
-		NSEventType event_type = [xevent type];
-		if(event_type == NSKeyUp) {
-			break;
-		}
-		
-		BOOL shiftPressed = (([NSEvent modifierFlags] & NSShiftKeyMask) != 0);
-		if (shiftPressed) {
-			[self nc__moveUpAndModifySelection];
-		} else {
-			[self nc__moveUp];
-		}
-		float waittime = [self waitTimeForCount:count];
-		NSDate* date = [NSDate dateWithTimeIntervalSinceNow:waittime];
-        xevent = [NSApp nextEventMatchingMask:NSAnyEventMask
-									untilDate:date
-									   inMode:NSDefaultRunLoopMode
-									  dequeue:YES];
-	}
-}
-
--(void)repeatinglyMoveDownWithEvent:(NSEvent*)event {
-	NSEvent* xevent = event;
-	for(NSInteger count=0; ; ++count) {
-		NSEventType event_type = [xevent type];
-		if(event_type == NSKeyUp) {
-			break;
-		}
-		
-		BOOL shiftPressed = (([NSEvent modifierFlags] & NSShiftKeyMask) != 0);
-		if (shiftPressed) {
-			[self nc__moveDownAndModifySelection];
-		} else {
-			[self nc__moveDown];
-		}
-		float waittime = [self waitTimeForCount:count];
-		
-		NSDate* date = [NSDate dateWithTimeIntervalSinceNow:waittime];
-        xevent = [NSApp nextEventMatchingMask:NSAnyEventMask
-									untilDate:date
-									   inMode:NSDefaultRunLoopMode
-									  dequeue:YES];
-	}
-}
-
-
 /*- (void)awakeFromNib
 {
 	[super awakeFromNib];
@@ -353,14 +305,14 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 			[m_lister navigateBackAction:self];
 			return;
 		}
-		[self repeatinglyMoveUpWithEvent:event];
+		[self nc_moveUpWithEvent:event];
 		return; }
 	case NSDownArrowFunctionKey: {
 		/*if(is_command_modifier) {
 			[m_lister navigateInOrBackAction:self];
 			return;
 		}*/
-		[self repeatinglyMoveDownWithEvent:event];
+		[self nc_moveDownWithEvent:event];
 		return; }
 		
 	case NSLeftArrowFunctionKey: { 
@@ -573,6 +525,25 @@ void logic_for_page_down3(NSRange range, int row, int rows, int* out_row, int* o
 	
 	[super drawRow: rowIndex clipRect: clipRect];
 }
+
+-(void)nc_moveUpWithEvent:(NSEvent*)event {
+	BOOL shiftPressed = (([NSEvent modifierFlags] & NSShiftKeyMask) != 0);
+	if (shiftPressed) {
+		[self nc__moveUpAndModifySelection];
+	} else {
+		[self nc__moveUp];
+	}
+}
+
+-(void)nc_moveDownWithEvent:(NSEvent*)event {
+	BOOL shiftPressed = (([NSEvent modifierFlags] & NSShiftKeyMask) != 0);
+	if (shiftPressed) {
+		[self nc__moveDownAndModifySelection];
+	} else {
+		[self nc__moveDown];
+	}
+}
+
 
 -(void)nc__moveUp {
 	int row_count = [self numberOfRows];
